@@ -12,7 +12,7 @@ A special thank you to Christopher Faulk (@dithiii) and his [pipeline](https://g
 # Angelfish Read Assembly 
 
 ## [Nanoq](https://github.com/esteinig/nanoq) read statistics.
-Nanoq was used to check statistics about the reads collected. 
+After combining all the read files into a single fastq.gz file, Nanoq was used to check statistics about the reads collected. 
 `nanoq -v -s -i Pterophyllum_scalare.fastq.gz`
 
 ## [Kraken](https://github.com/DerrickWood/kraken) contamination detection
@@ -24,4 +24,9 @@ I did have quite a challenge getting kraken to run on my computer, so do be care
 ## [Flye](https://github.com/fenderglass/Flye) de-novo assembly
 Flye was used to perform a de novo assembly of the angelfish genome. Due to the computational memory restrains of my computer (M1 Macbook Pro 2022, 32 GB RAM) the galaxy bioinformatics platform was used instead. You can sign up for a free account [here](https://usegalaxy.org/login). Assembling the angelfish genome required a peak 42 GB of RAM, but system requirements will vary based on various factors including the number of reads and average read length. 
 
-Reads below 1000 bp were dropped as flye had a minimum overlap length of 1000 bp. Assembly of the genome took approximately 2 hours. 
+Reads below 1000 bp were dropped as flye had a minimum overlap length of 1000 bp. Assembly of the genome took approximately 2 hours on the TACC Stampede 2 SKX partition compute resource. 
+
+## [BUSCO](https://gitlab.com/ezlab/busco/-/releases#5.4.3) completeness of genome assessment
+BUSCO was used to asses the completness of the initial assembly. BUSCO (Benchmarking Universal Single Copy Orthologs) identifies unvieral genes found in organisms. The angelfish genome assembly was assessed against the Actinopterygii lineage to identify highly conserved fish genes. The more USCOs found, the higher the liklihood that your genome is complete. BUSCO analysis was also done through the galaxy platform. 
+
+

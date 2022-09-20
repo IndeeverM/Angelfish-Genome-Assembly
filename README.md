@@ -1,6 +1,6 @@
 # Angelfish-Genome-Assembly
 This is a pipeline describing how I assembled the complete genome (86.5%) of the freshwater angelfish, *Pterophylllum scalare* with the Oxford Nanopore Technologies MinION Mk1B device.
-A special thank you to Christopher Faulk (@dithiii) and his [pipeline](https://github.com/dithiii/ant-pipeline/blob/main/README.md) which tremendously helped me in my work and inspired me to write this pipeline for those who are interested in alternative ways to assemble a genome or just specifically interested in how the angelfish genome was assembled. There is some overlap between our two pipelines, so do check his out. 
+A special thank you to Christopher Faulk (@dithiii) and his [pipeline](https://github.com/dithiii/ant-pipeline/blob/main/README.md) which tremendously helped me in my work and inspired me to write this pipeline for those who are interested in alternative ways to assemble a genome or just specifically interested in how the angelfish genome was assembled. There is significant overlap between our two pipelines, so do check his out. 
 
 # Angelfish Genome Sequencing
 1. Angelfish DNA was extracted from muscle and skin tissue of an aquarium angelfish that died of natural causes. The NEB Monarch Genomic DNA purification kit was used to perform this extraction. 

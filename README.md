@@ -15,10 +15,10 @@ A special thank you to Christopher Faulk (@dithiii) and his [pipeline](https://g
 After combining all the read files into a single fastq.gz file, Nanoq was used to check statistics about the reads collected. 
 `nanoq -v -s -i Pterophyllum_scalare.fastq.gz`
 
-## [Kraken](https://github.com/DerrickWood/kraken) contamination detection
-Kraken as used to indentify contaminant contigs in the collected reads. 
+## [Kraken2](https://github.com/DerrickWood/kraken) contamination detection
+Kraken2 was used to indentify contaminant sequences in the collected reads. 
 `kraken2 --db minikraken --threads 10 --use-names --report Pterophyllum_scalare.FASTQ.unmapped.report.txt --output Pterophyllum_scalare.FASTQ.unmapped.out.txt Pterophyllum_scalare.fastq`
-I did have quite a challenge getting kraken to run on my computer, so do be careful while setting it up on your computer. 
+I did have quite a challenge getting kraken to run on my computer, so do be careful while setting it up on your machine. 
 
 
 ## [Flye](https://github.com/fenderglass/Flye) de-novo assembly

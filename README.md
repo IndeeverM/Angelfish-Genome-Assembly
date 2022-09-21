@@ -39,7 +39,7 @@ have already assembled the angelfish genome through a PCR based method. This mak
 
 First, the alignment tool built in the MinKnow software was used to align the collected angelfish reads against the reference mitochondrial genome. This step ensures we only use mitochondiral sequences in the assembly and are able to eliminate all the genomic reads. 
 
-Once the mitochondrial reads of interest were identified, the [shasta](https://github.com/chanzuckerberg/shasta) de novo assembled put together the contigs into the reference mitochondrial genome. This de-novo step reduces bias (at least theoretically) in the alignment by assembling the mitochondrial genome from scratch
+Once the mitochondrial reads of interest were identified, the [shasta](https://github.com/chanzuckerberg/shasta) de novo assembler put together the contigs into the reference mitochondrial genome. This de-novo step reduces bias (at least theoretically) in the alignment by assembling the mitochondrial genome from scratch This was done locally since shasta as a mitochondrial genome assembly does not require much computational power (You could technically use flye for the mitochondrial genome assembly as well). 
 
 `shasta-macOS-11-Intel-0.10.0 --input Mitochondrial_Reads.fastq.gz --config Nanopore-May2022 --memoryBacking disk --memoryMode filesystem --Reads.minReadLength 1000 --assemblyDirectory AngelfishMitochondrialGenomeAssembly`
 
@@ -47,5 +47,7 @@ Once the mitochondrial reads of interest were identified, the [shasta](https://g
 Now, back to the whole genome assembly. To cleanup the contigs (which had an 88% BUSCO score at this point). All the contigs were screened by Kraken2 once againt to identify contaminant contigs. Once that was complete, the remianing contigs were aligned to the mitochondrial reference genome build in the previous step, to identify contigs that were of mitochondrial in origin. Once all these contigs were removed, the final genome assembly had a BUSCO score of 86.5%
 
 
+A [partial genome](https://www.ncbi.nlm.nih.gov/nuccore/2277407487) of the angelfish (49.5% BUSCO Score) is already avialble through NCBI. I am currently in the process of depositing the final genome and the mitochondrial genome sequence. 
 
+If you read through all of this, thank you so very much. Do not hesitate to reach out if you would like me to elaborate further, or if just have comments or concerns!
 

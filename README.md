@@ -29,4 +29,23 @@ Reads below 1000 bp were dropped as flye had a minimum overlap length of 1000 bp
 ## [BUSCO](https://gitlab.com/ezlab/busco/-/releases#5.4.3) completeness of genome assessment
 BUSCO was used to asses the completness of the initial assembly. BUSCO (Benchmarking Universal Single Copy Orthologs) identifies unvieral genes found in organisms. The angelfish genome assembly was assessed against the Actinopterygii lineage to identify highly conserved fish genes. The more USCOs found, the higher the liklihood that your genome is complete. BUSCO analysis was also done through the galaxy platform. 
 
+## [Racon](https://github.com/isovic/racon) genome polishing tool
+RACON identifies potential errors in the genome assembly and corrects the alignment of the reads to the genome being built. Interestingly, flye on the galaxy platform does not give a BAM file for the alignments of the sequencing reads. That needs to be generated separately with minimap or another tool. 
+What's also interesting is that made practically no difference in genome BUSCO score. RACON was available in the galaxy platform. Using lower quality reads in the assembly also did not improve the genome assembly. 
+
+## Mitochondrial Genome assembly
+Let's take a quick detour and talk about the assembly of the mitochondrial genome of the angelfish. [Hao](https://pubmed.ncbi.nlm.nih.gov/26000948/) et al. 
+have already assembled the angelfish genome through a PCR based method. This makes it easy to assemble a mirochondrial genome, since we already have a reference template to work with. 
+
+First, the alignment tool built in the MinKnow software was used to align the collected angelfish reads against the reference mitochondrial genome. This step ensures we only use mitochondiral sequences in the assembly and are able to eliminate all the genomic reads. 
+
+Once the mitochondrial reads of interest were identified, the [shasta](https://github.com/chanzuckerberg/shasta) de novo assembled put together the contigs into the reference mitochondrial genome. This de-novo step reduces bias (at least theoretically) in the alignment by assembling the mitochondrial genome from scratch
+
+`shasta-macOS-11-Intel-0.10.0 --input Mitochondrial_Reads.fastq.gz --config Nanopore-May2022 --memoryBacking disk --memoryMode filesystem --Reads.minReadLength 1000 --assemblyDirectory AngelfishMitochondrialGenomeAssembly`
+
+## Genome Cleanup
+Now, back to the whole genome assembly
+
+
+
 

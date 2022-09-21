@@ -44,7 +44,7 @@ Once the mitochondrial reads of interest were identified, the [shasta](https://g
 `shasta-macOS-11-Intel-0.10.0 --input Mitochondrial_Reads.fastq.gz --config Nanopore-May2022 --memoryBacking disk --memoryMode filesystem --Reads.minReadLength 1000 --assemblyDirectory AngelfishMitochondrialGenomeAssembly`
 
 ## Genome Cleanup
-Now, back to the whole genome assembly
+Now, back to the whole genome assembly. To cleanup the contigs (which had an 88% BUSCO score at this point). All the contigs were screened by Kraken2 once againt to identify contaminant contigs. Once that was complete, the remianing contigs were aligned to the mitochondrial reference genome build in the previous step, to identify contigs that were of mitochondrial in origin. Once all these contigs were removed, the final genome assembly had a BUSCO score of 86.5%
 
 
 

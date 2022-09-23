@@ -46,7 +46,12 @@ Once the mitochondrial reads of interest were identified, the [shasta](https://g
 ## Genome Cleanup
 Now, back to the whole genome assembly. To cleanup the contigs (which had an 88% BUSCO score at this point). All the contigs were screened by Kraken2 once againt to identify contaminant contigs. Once that was complete, the remianing contigs were aligned to the mitochondrial reference genome build in the previous step, to identify contigs that were of mitochondrial in origin. Once all these contigs were removed, the final genome assembly had a BUSCO score of 86.5%
 
-t
+
 A [partial genome](https://www.ncbi.nlm.nih.gov/nuccore/2277407487) of the angelfish (49.5% BUSCO Score) that i deposited a few months ago is already available through NCBI. I am currently in the process of depositing the final genome and the mitochondrial genome sequence. I'll update this when that occurs!
 
+## [Genome Annotation](https://www.gensas.org) to identify orthologs 
+Blastp through the GenSAS platform was used to identify functional orthologs in closely related species. Th Angelfish genome was blasted against the NCBI vertebrate-other database. It took around 1 week to obtain the final blast results. 
+
 If you read through all of this, thank you so very much. Do not hesitate to reach out if you would like me to elaborate further, or if just have comments or concerns!
+
+

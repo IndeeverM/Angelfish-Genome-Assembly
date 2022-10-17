@@ -1,0 +1,82 @@
+.axis text {
+  font: 20px sans-serif;
+  fill: #555555;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke-width:1px;
+  stroke: #555555;
+  shape-rendering: crispEdges;
+  vector-effect:non-scaling-stroke;
+}
+
+.asm-cumulative-point {
+  stroke:#555555;
+  stroke-width:2px;
+  fill:#ffffff;
+  pointer-events:none;
+}
+.asm-cumulative-line {
+  stroke:#555555;
+  stroke-width:2px;
+  fill:none;
+}
+.asm-reference-line {
+  stroke:#e31a1c;
+  stroke-width:2px;
+  fill:none;
+}
+path.asm-square-focus {
+  stroke-width:4px;
+}
+text.asm-square-focus {
+  font-weight:bold;
+}
+.asm-square-key-text {
+  font-size:16px;
+  stroke:none;
+  stroke-width:0px;
+  fill:#555555;
+  text-anchor:start;
+  dominant-baseline:alphabetical;
+}
+.asm-reference-key text {
+  stroke:none;
+  stroke-width:0px;
+  fill:#e31a1c;
+}
+.d3-tip {
+  pointer-events:none;
+  line-height: 1.2;
+  font-weight: normal;
+  font-family:consolas,monospace;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  pointer-events:none;
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  margin: -2px;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  pointer-events:none;
+  margin: -2px;
+  top: 100%;
+  left: 0;
+}

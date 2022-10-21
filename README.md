@@ -48,6 +48,7 @@ Now, back to the whole genome assembly. To cleanup the contigs (which had an 88%
 
 
 A [partial genome](https://www.ncbi.nlm.nih.gov/nuccore/2277407487) of the angelfish (49.5% BUSCO Score) that i deposited a few months ago is already available through NCBI. I am currently in the process of depositing the final genome and the mitochondrial genome sequence. I'll update this when that occurs!
+UPDATE 10/20/22: The complete genome has just been made available through [NCBI] (https://www.ncbi.nlm.nih.gov/nuccore/JAMQGT000000000).
 
 ## [Genome Annotation](https://www.gensas.org) to identify orthologs 
 Blastp through the GenSAS platform was used to identify functional orthologs in closely related species. Th Angelfish genome was blasted against the NCBI vertebrate-other database. It took around 1 week to obtain the final blast results. 
